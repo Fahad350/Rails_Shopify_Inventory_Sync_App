@@ -1,0 +1,4 @@
+import_supplier_products:
+  cron: "* * * * *"
+  class: "ImportSupplierProductsJob"
+  queue: default
