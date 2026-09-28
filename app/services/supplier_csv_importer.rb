@@ -35,6 +35,8 @@ class SupplierCsvImporter
 
     variant.assign_attributes(
       title: row["variant_title"],
+      color: row["color"],
+      size: row["size"],
       sku: row["sku"],
       price: row["price"],
       inventory_quantity: row["inventory_quantity"]

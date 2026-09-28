@@ -2,7 +2,7 @@ require "yaml"
 
 Sidekiq.configure_server do |config|
   config.redis = {
-    url: ENV.fetch("REDIS_URL", "redis://localhost:6379/0")
+    url: ENV.fetch("REDIS_URL", "redis://localhost:6379/2")
   }
 
   schedule_file = Rails.root.join("config", "sidekiq_schedule.yml")
@@ -18,6 +18,6 @@ end
 
 Sidekiq.configure_client do |config|
   config.redis = {
-    url: ENV.fetch("REDIS_URL", "redis://localhost:6379/0")
+    url: ENV.fetch("REDIS_URL", "redis://localhost:6379/2")
   }
 end

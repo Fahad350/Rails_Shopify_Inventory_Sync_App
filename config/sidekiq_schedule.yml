@@ -1,4 +1,9 @@
 import_supplier_products:
-  cron: "* * * * *"
+  cron: "0 * * * *"
   class: "ImportSupplierProductsJob"
+  queue: default
+
+sync_products_to_shopify:
+  cron: "*/15 * * * *"
+  class: "SyncProductsJob"
   queue: default
